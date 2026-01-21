@@ -29,6 +29,13 @@ class Program
         int minutes = totalSeconds / 60;
         int seconds = totalSeconds % 60;
 
-        Console.WriteLine($"{minutes}:{seconds:D2}");
+        if (seconds < 10)
+        {
+            Console.WriteLine($"{minutes}:0{seconds}");
+        }
+        else
+        {
+            Console.WriteLine($"{minutes}:{seconds}");
+        }
     }
 }
