@@ -35,6 +35,13 @@ class Program
             hours = 0;
         }
 
-        Console.WriteLine($"{hours}:{minutes:D2}");
+        if (minutes < 10)
+        {
+            Console.WriteLine($"{hours}:0{minutes}");
+        }
+        else
+        {
+            Console.WriteLine($"{hours}:{minutes}");
+        }
     }
 }
