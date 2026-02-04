@@ -28,15 +28,14 @@ class Program
         int sum = 0;
         int max = int.MinValue;
 
-        int[] numbers = new int[n];
-
-        for (int i = 0; i < n; i++)
+        for (int i = 1; i <= n; i++)
         {
-            numbers[i] = int.Parse(Console.ReadLine());
-            sum += numbers[i];
-            if (numbers[i] > max)
+            int number = int.Parse(Console.ReadLine());
+            sum = sum + number;
+
+            if (number > max)
             {
-                max = numbers[i];
+                max = number;
             }
         }
 
