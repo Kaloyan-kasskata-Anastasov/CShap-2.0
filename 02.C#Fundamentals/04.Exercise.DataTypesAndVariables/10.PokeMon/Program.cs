@@ -1,37 +1,27 @@
 ﻿using System;
 
-/*
-5
-2
-3
-
-2000000000
-1
-2
-
-*/
-internal class Program
+class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        int n = int.Parse(Console.ReadLine());
-        int m = int.Parse(Console.ReadLine());
-        byte y = byte.Parse(Console.ReadLine());
+        int energy = int.Parse(Console.ReadLine());
+        int distance = int.Parse(Console.ReadLine());
+        int factor = int.Parse(Console.ReadLine());
 
-        ulong pokeCount = 0;
-        double percent = n * 0.50d;
+        int pokeCount = 0;
+        double halfEnergy = energy / 2d;
 
-        while (n >= m)
+        while (energy >= distance)
         {
             pokeCount++;
-            n -= m;
-            if (percent == n && y != 0)
+            energy -= distance;
+            if (halfEnergy == energy && factor != 0)
             {
-                n /= y;
+                energy /= factor;
             }
         }
 
-        Console.WriteLine(n);
+        Console.WriteLine(energy);
         Console.WriteLine(pokeCount);
     }
 }
